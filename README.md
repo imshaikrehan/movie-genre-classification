@@ -137,3 +137,8 @@ Classification Report on training set:
    macro avg       0.95      0.95      0.95      3000
 weighted avg       0.95      0.95      0.95      3000
 
+
+## Model Performance
+- Accuracy: ~94.6% on training set
+- Classifier: Multinomial Naive Bayes
+- Vectorizer: TF-IDF with 5000 features
