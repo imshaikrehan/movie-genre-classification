@@ -35,3 +35,7 @@ plt.xlabel('Class')
 plt.ylabel('Frequency')
 plt.xticks(rotation=65)
 plt.show()
+
+tfidf_vectorizer = TfidfVectorizer(max_features=5000)
+X_train_tfidf = tfidf_vectorizer.fit_transform(train_data['Description'])
+y_train = train_data['Genre']
