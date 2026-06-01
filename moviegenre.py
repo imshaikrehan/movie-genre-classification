@@ -10,3 +10,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score, classification_report
+
+train_path = r'C:\Users\naval\OneDrive\Desktop\movie_genre_classication\archive\Genre Classification Dataset\train_data.txt'
+train_data = pd.read_csv(train_path, sep=':::', names=['Title', 'Genre', 'Description'], engine='python')
+
+test_path = r'C:\Users\naval\OneDrive\Desktop\movie_genre_classication\archive\Genre Classification Dataset\test_data.txt'
+test_data = pd.read_csv(test_path, sep=':::', names=['Id', 'Title', 'Description'], engine='python')
