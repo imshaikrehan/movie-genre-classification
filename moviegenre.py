@@ -39,3 +39,6 @@ plt.show()
 tfidf_vectorizer = TfidfVectorizer(max_features=5000)
 X_train_tfidf = tfidf_vectorizer.fit_transform(train_data['Description'])
 y_train = train_data['Genre']
+
+nb_classifier = MultinomialNB()
+nb_classifier.fit(X_train_tfidf, y_train)
