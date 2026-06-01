@@ -142,3 +142,10 @@ weighted avg       0.95      0.95      0.95      3000
 - Accuracy: ~94.6% on training set
 - Classifier: Multinomial Naive Bayes
 - Vectorizer: TF-IDF with 5000 features
+
+## Requirements
+- pandas
+- scikit-learn
+- matplotlib
+- seaborn
+- nltk
