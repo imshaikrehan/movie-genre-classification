@@ -42,3 +42,7 @@ y_train = train_data['Genre']
 
 nb_classifier = MultinomialNB()
 nb_classifier.fit(X_train_tfidf, y_train)
+
+y_train_pred = nb_classifier.predict(X_train_tfidf)
+print('Accuracy on training set:', accuracy_score(y_train, y_train_pred))
+print('Classification Report on training set:\n', classification_report(y_train, y_train_pred))
