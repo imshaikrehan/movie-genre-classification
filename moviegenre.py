@@ -46,3 +46,8 @@ nb_classifier.fit(X_train_tfidf, y_train)
 y_train_pred = nb_classifier.predict(X_train_tfidf)
 print('Accuracy on training set:', accuracy_score(y_train, y_train_pred))
 print('Classification Report on training set:\n', classification_report(y_train, y_train_pred))
+
+X_test = tfidf_vectorizer.transform(test_data['Description'])
+X_test_predictions = nb_classifier.predict(X_test)
+test_data['Predicted_Genre'] = X_test_predictions
+test_data.to_csv('predicted_genres.csv', index=False)
