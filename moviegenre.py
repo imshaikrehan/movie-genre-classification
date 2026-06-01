@@ -51,3 +51,10 @@ X_test = tfidf_vectorizer.transform(test_data['Description'])
 X_test_predictions = nb_classifier.predict(X_test)
 test_data['Predicted_Genre'] = X_test_predictions
 test_data.to_csv('predicted_genres.csv', index=False)
+
+import pickle
+with open('tfidf_vectorizer.pkl', 'wb') as file:
+    pickle.dump(tfidf_vectorizer, file)
+with open('nb_classifier.pkl', 'wb') as file:
+    pickle.dump(nb_classifier, file)
+print('Models pickled successfully.')
