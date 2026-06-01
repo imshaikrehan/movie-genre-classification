@@ -16,3 +16,8 @@ train_data = pd.read_csv(train_path, sep=':::', names=['Title', 'Genre', 'Descri
 
 test_path = r'C:\Users\naval\OneDrive\Desktop\movie_genre_classication\archive\Genre Classification Dataset\test_data.txt'
 test_data = pd.read_csv(test_path, sep=':::', names=['Id', 'Title', 'Description'], engine='python')
+
+print(train_data.describe())
+print(test_data.describe())
+print(train_data.isnull().sum())
+print(test_data.isnull().sum())
